@@ -1,0 +1,146 @@
+﻿<!doctype html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Axoma">
+    <meta name="keywords" content="Axoma">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>FianTech</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="static\plugin\bootstrap\css\bootstrap.min.css" rel="stylesheet">
+    <link href="static\plugin\font-awesome\css\fontawesome-all.min.css" rel="stylesheet">
+    <link href="static\plugin\et-line\style.css" rel="stylesheet">
+    <link href="static\plugin\themify-icons\themify-icons.css" rel="stylesheet">
+    <link href="static\plugin\owl-carousel\css\owl.carousel.min.css" rel="stylesheet">
+    <link href="static\plugin\magnific\magnific-popup.css" rel="stylesheet">
+    <link href="static\css\style.css" rel="stylesheet">
+    <link href="static\css\color\default.css" rel="stylesheet" id="color_theme">
+  </head>
+
+  <body data-spy="scroll" data-target="#navbar" data-offset="98">
+    <form name="sendin" action="$(link-login-only)" method="post">
+      <input type="hidden" name="username" />
+      <input type="hidden" name="password" />
+      <input type="hidden" name="dst" value="$(link-orig)" />
+      <input type="hidden" name="popup" value="true" />
+    </form>
+    <script type="text/javascript" src="/md5.js"></script>
+    <script type="text/javascript">
+    <!--
+        function doLogin() {
+      document.sendin.username.value = document.login.username.value;
+      document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+      document.sendin.submit();
+      return false;
+        }
+    //-->
+    </script>
+    <div id="loading">
+      <div class="load-circle"><span class="one"></span></div>
+    </div>
+    <header>
+      <nav class="navbar header-nav navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img class="light-logo" src="static\img\logo1.png" height="50 px " title="" alt="">
+            <img class="dark-logo" src="static\img\logo1.png" height="50 px" title="" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+
+        </div>
+      </nav> 
+    </header>
+    <main>
+      <section id="home" class="home-banner-03 theme-bg bg-effect-box">
+        <div class="bg-effect bg-cover" style="background-image: url(static/img/banner-effect-7.svg);"></div>
+        <div id="particles_effect" class="particles-effect"></div>
+        <div class="container">
+          <div class="row align-items-center justify-content-center p-100px-tb sm-p-60px-b">
+            <div class="col-lg-5 md-p-30px-tb">
+              <h5 class="white-color">FianTech</h5>
+              <h1 class="font-alt white-color">Login Hotspot</h1>
+              
+              <div class="subscribe-block">
+                  <div class="card-block py-lg px-md">
+                    <form id="loginForm" class="md-form form-light" role="form" action="$(link-login-only)" method="post">
+                        <input type="hidden" name="dst" value="$(link-orig)"/>
+                        <input type="hidden" name="popup" value="true"/>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <div class="md-form-line-wrap">
+                             <br> <input id="inputUser" type="text" name="username" placeholder="Username" class="form-control" autofocus required>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <div class="md-form-line-wrap">
+                              <br> <input id="inputPassword" type="password" name="password" placeholder="Password" class="form-control" required>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                              <p><font style="color: #ffffffe8"></font></p>
+                          </div>
+                        </div></br>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-block btn-light"><span class="btn-elem-wrap"><span class="text" style="color: darkblue">LOGIN</span></span></button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+              </div>
+            </div> 
+            <div class="col-lg-7 text-center p-50px-l">
+              <img src="static\img\home-banner-7.svg" title="" alt="">
+            </div>
+          </div> 
+        </div>
+      </section>
+    <footer class="footer footer-dark">
+      <div class="footer-copy">
+        <div class="row">
+          <div class="col-12">
+            <marquee><p>SELAMAT MENIKMATI KONEKSI WIFI YANG STABIL DAN MURAH</p></marquee>
+          </div>
+        </div> 
+      </div>
+    </footer> 
+    <script src="static\js\jquery-3.2.1.min.js"></script>
+    <script src="static\js\jquery-migrate-3.0.0.min.js"></script>
+    <script src="static\plugin\appear\jquery.appear.js"></script>
+    <script src="static\plugin\bootstrap\js\popper.min.js"></script>
+    <script src="static\plugin\bootstrap\js\bootstrap.js"></script>
+    <script src="static\plugin\particles\particles.min.js"></script>
+    <script src="static\plugin\particles\particles-app.js"></script>
+    <script src="static\js\jquery.parallax-scroll.js"></script>
+    <script src="static\js\custom.js"></script>
+    <script type="text/javascript" src="md5.js"></script>
+    <script type="text/javascript">
+        $('#loginForm').submit(function () {
+            var password = $('#inputPassword');
+            password.val(hexMD5('$(chap-id)' + password.val() + '$(chap-challenge)'));
+        });
+    </script>
+    <script>
+      $("#menu-toggle").click(function (e) {
+          e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+    <script type="text/javascript">
+    <!--
+      document.login.username.focus();
+    //-->
+    </script>
+
+  </body>
+</html>
